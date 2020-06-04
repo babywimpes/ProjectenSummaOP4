@@ -61,8 +61,16 @@
 
     $("#btn1").click(function(){
     var person = prompt("Please enter your name", "");
-    $("#names").append('<button class="btn btn-primary btn-lg circ ml-1"><i class="fas fa-user"></i><p style="color:black;">'+person+'</p></button>');
-    });
+        if (person == null || person == "") {
+        
+        } 
+        
+        else {
+            $("#names").append('<button class="btn btn-primary btn-lg circ ml-1"><i class="fas fa-user"></i><p style="color:black;">'+person+'</p></button>');
+    }});
+        
+        
+   
 </script>
 </body>
 
