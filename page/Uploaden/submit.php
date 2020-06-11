@@ -38,11 +38,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
   	$upload_file_name = preg_replace("/[^A-Za-z0-9 \.\-_]/", '', $upload_file_name);
 
   	//set a limit to the file upload size
-  	if ($_FILES['my_upload']['size'] > 1000000) 
-  	{
-		echo " too big file ";
-  		exit;        
-    }
+  	// if ($_FILES['my_upload']['size'] > 1000000) 
+  	// {
+	// 	echo " too big file ";
+  	// 	exit;        
+    // }
 
     //Save the file
     $dest=__DIR__.'/uploads/'.$upload_file_name;
