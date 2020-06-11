@@ -18,7 +18,7 @@
 
         <div class="row">
             <div class="col text-center">
-                <a class="btn btn-primary btn-lg" href="Beeldsessie/beeldhome.php">Beeld Sessies</a>
+                <a class="btn btn-primary btn-lg" href="Beeldsessie/Users.php">Beeld Sessies</a>
                 <a class="btn btn-primary btn-lg" href="Lessonslearned/lessonshome.php">Lessons Learned</a>
             </div>
         </div>

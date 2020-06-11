@@ -45,20 +45,20 @@
 
  
 
-    <div class="col text-center" id="names">
-    <!-- <span class="dot text-center"><i class="fas fa-user"></i><p></p></span> -->
-        <button class="btn btn-primary btn-lg circ ml-1"><i class="fas fa-user"></i></button>
-        <button class="btn btn-primary btn-lg circ ml-1"><i class="fas fa-user"></i></button>
+    <div class="col text-center mb-5" id="names">
+
+        <!-- <button class="btn btn-primary btn-lg circ ml-1"><i class="fas fa-user"></i></button>
+        <button class="btn btn-primary btn-lg circ ml-1"><i class="fas fa-user"></i></button> -->
     </div>
-    
+    <div class="col text-center ">
+
+       
+        <button class="btn btn-primary btn-lg">Doorgaan</button>
+    </div>
+
+
+
 <script>
-
-    function adduser(){
-      
-    }
-
-
-
     $("#btn1").click(function(){
     var person = prompt("Please enter your name", "");
         if (person == null || person == "") {
@@ -69,8 +69,6 @@
             $("#names").append('<button class="btn btn-primary btn-lg circ ml-1"><i class="fas fa-user"></i><p style="color:black;">'+person+'</p></button>');
     }});
         
-        
-   
 </script>
 </body>
 
