@@ -21,9 +21,6 @@
     </div>
 
 
- 
-
-
   <div class="form-row m-2">
     <div class="col">
         <form action="Index.php" method="post" enctype="multipart/form-data">
