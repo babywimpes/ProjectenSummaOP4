@@ -15,7 +15,6 @@
 
 <body>
     <div class="container top-buffer" >
-
         <div class="row">
             <div class="col text-center">
                 <a class="btn btn-primary btn-lg" href="Beeldsessie/Users.php">Beeld Sessies</a>
