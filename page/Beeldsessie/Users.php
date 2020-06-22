@@ -57,7 +57,6 @@
 
 
 <script>
-
     $("#btn1").click(function(){
     var person = prompt("Please enter your name", "");
         if (person == null || person == "") {
@@ -69,48 +68,6 @@
     }});
         
 </script>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-<script>
-
-
-$(document).ready(function(){
-    var array = ["hello","world"];
-    $.post('test2.php',{data:array}, function(response){
-
-    });
- });
-
-
-
- </script>
-
-<?php
-session_start();
-?>
-
-
-<script>
-
-$(document).ready(function(){
-
-    var session = eval('(<?php echo json_encode($_SESSION["my_array"])?>)');
-    console.log(session);
-
-    var i;
-    for (i = 0; i < session.length; i++) {
-
-    $("#names").append('<button class="btn btn-primary btn-lg circ ml-1"><i class="fas fa-user"></i><p style="color:black;">'+session[i]+'</p></button>');
-    }
-
- });
- </script>
-
-
-
 </body>
 
 </html>

@@ -27,15 +27,17 @@
         } else {
             if (preg_match("#(?<=v=|v\/|vi=|vi\/|youtu.be\/)[a-zA-Z0-9_-]{11}#", $youtube, $matches) == 1) {
             
-                $sql = "INSERT INTO upload (username, videoID, comment, allowed) VALUES ('$username','$matches[0]','$comment',0)";
+                $sql = "INSERT INTO upload (username, videoID, comment) VALUES ('$username','$matches[0]','$comment')";
                 $conn->query($sql);
+                header("Location: Users.php");
+
             } else {
                 echo '<script> alert("Vul een link in  invoerveld")</script>';
             }
         }
     }
     ?>
-
+ 
 </body>
 
 </html>

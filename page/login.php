@@ -36,9 +36,9 @@
             session_start();
             $_SESSION['username']=$row['user'];
             $_SESSION['userid']=$row['userID'];
+            $_SESSION['isteacher'] =$row['teacher'];  
             header('Location: index.php');
                     
-                
             } else{
                 echo "0 resultaten";
             }
