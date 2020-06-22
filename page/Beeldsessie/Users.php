@@ -55,9 +55,9 @@
     </div>
 
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-
+var array = [];
     $("#btn1").click(function(){
     var person = prompt("Please enter your name", "");
         if (person == null || person == "") {
@@ -65,34 +65,21 @@
         } 
         
         else {
-            $("#names").append('<button class="btn btn-primary btn-lg circ ml-1"><i class="fas fa-user"></i><p style="color:black;">'+person+'</p></button>');
+            $("#names").append('<button class="btn btn-primary btn-lg circ ml-1"><i class="fas fa-user"></i><p style="color:black;">'+person+'</p></button>');~
+            array.push(person);
+            console.log(array);
+            $.post('test2.php',{data:array}, function(response){
+
+});
     }});
         
 </script>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-<script>
-
-
-$(document).ready(function(){
-    var array = ["hello","world"];
-    $.post('test2.php',{data:array}, function(response){
-
-    });
- });
-
-
-
- </script>
-
+<!-- ///////////////////////////////////////////////////////////////////// Haalt session op en opent hem als buttons ///////////////////////////////////////////////////////////////// -->
 <?php
 session_start();
 ?>
-
-
 <script>
 
 $(document).ready(function(){
@@ -108,7 +95,7 @@ $(document).ready(function(){
 
  });
  </script>
-
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
 </body>
