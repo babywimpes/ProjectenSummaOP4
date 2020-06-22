@@ -68,7 +68,7 @@ var array = [];
             $("#names").append('<button class="btn btn-primary btn-lg circ ml-1"><i class="fas fa-user"></i><p style="color:black;">'+person+'</p></button>');~
             array.push(person);
             console.log(array);
-            $.post('test2.php',{data:array}, function(response){
+            $.post('SaveUsers.php',{data:array}, function(response){
 
 });
     }});
