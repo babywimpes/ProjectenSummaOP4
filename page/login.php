@@ -26,7 +26,7 @@
             $username = $_POST['user'];
             $password = $_POST['pass'];
 
-            $sql = "SELECT user, pass FROM logininfo WHERE user='$username' AND pass='$password'"; 
+            $sql = "SELECT * FROM logininfo WHERE user='$username' AND pass='$password'"; 
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
@@ -35,6 +35,7 @@
             
             session_start();
             $_SESSION['username']=$row['user'];
+            $_SESSION['userid']=$row['userID'];
             header('Location: index.php');
                     
                 
