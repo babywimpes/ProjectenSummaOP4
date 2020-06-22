@@ -14,6 +14,7 @@
 </head>
 
 <body>
+<a href="login.php" class="btn btn-primary btn-lg">Login</a>
     <div class="container top-buffer" >
         <div class="row">
             <div class="col text-center">
