@@ -50,8 +50,8 @@
     </div>
     <div class="col text-center ">
 
-       
-        <button class="btn btn-primary btn-lg">Doorgaan</button>
+    <a href="PlayVideo.php" class="btn btn-primary btn-lg">Doorgaan</a>
+   
     </div>
 
 
