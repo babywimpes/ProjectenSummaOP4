@@ -27,13 +27,13 @@
 </head>
 
 <body>
-
+    <a href="VideoUpload.php" class="btn btn-secondary btn-lg">Upload een video</a>
     <div class="container top-buffer ">
         <div class="row mb-5">
             <div class="col text-center ">
                 <p class="h2">Welkom bij het gekozen ding!</p>
                 <p class="h4">Om te beginnen klik op de add user button om gebruikers toe te voegen</p>
-         
+
                 <button type="submit" id="btn1" class="btn btn-primary btn-lg" onclick="adduser()"><i class="fas fa-user-plus"></i></button>
          
             </div>
