@@ -34,7 +34,7 @@
             
             $videoId ="eC7f9tMslVE";
 
-            echo '<iframe width="1560" height="677" src="https://www.youtube.com/embed/'.$videoId.'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            echo '<iframe width="1560" height="677" src="https://www.youtube.com/embed/'.$videoId.'?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
             ?>
         </div>
     </div>
@@ -79,11 +79,22 @@
         
         }
 
+
+        
+        var session = eval('(<?php echo json_encode($_SESSION["my_array"])?>)');
+        var AmountOfStamps = 1;
+        var MaxAmountOfStamps = session.length*6;
+        console.log("Max Amount of stamps: "+MaxAmountOfStamps);
         function Timestamped(){
 
-            clickedTime.push(Stampss);
-            console.log(clickedTime);
+            if(AmountOfStamps <= MaxAmountOfStamps){
+                AmountOfStamps++;
+                clickedTime.push(Stampss);
+                console.log(clickedTime);
+            }
+            else{
 
+            }
         }
 
     </script>
