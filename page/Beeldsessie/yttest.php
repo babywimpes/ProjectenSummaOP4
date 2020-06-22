@@ -8,15 +8,15 @@
 
 ?>
 
-<button class="" onclick="time();">hey</button>
+<button class="" onclick="Timestamped();">hey</button>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <label id="seconds">0</label>
 <script>
 
 
-
-
+var clickedTime = [];
+var Stampss ;
 var secondsLabel = document.getElementById("seconds");
 var totalSeconds = 0;
 
@@ -27,10 +27,16 @@ function setTime() {
   var StartStamp = totalSeconds - 5;
   var EndStamp = totalSeconds + 5;
   secondsLabel.innerHTML = "start="+StartStamp+"&end="+EndStamp+"";
+  Stampss = "start="+StartStamp+"&end="+EndStamp+"";
   
 }
 
-var clickedTime = [];
+function Timestamped(){
+
+    clickedTime.push(Stampss);
+    console.log(clickedTime);
+
+}
 
 
 

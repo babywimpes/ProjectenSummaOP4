@@ -43,7 +43,7 @@
 
     </div>
 
-
+    <label id="seconds">0</label>
 
     <?php
         session_start();
@@ -57,10 +57,35 @@
             var i;
             for (i = 0; i < session.length; i++) {
 
-            $("#names").append('<button class="btn btn-primary btn-lg circ ml-4"><i class="fas fa-user"></i><p style="color:black;">'+session[i]+'</p></button>');
+            $("#names").append('<button onclick="Timestamped();" class="btn btn-primary btn-lg circ ml-4"><i class="fas fa-user"></i><p style="color:black;">'+session[i]+'</p></button>');
             }
 
         });
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        var clickedTime = [];
+        var Stampss ;
+        var secondsLabel = document.getElementById("seconds");
+        var totalSeconds = 0;
+
+        setInterval(setTime, 1000);
+
+        function setTime() {
+        ++totalSeconds;
+        var StartStamp = totalSeconds - 5;
+        var EndStamp = totalSeconds + 5;
+        secondsLabel.innerHTML = "start="+StartStamp+"&end="+EndStamp+"";
+        Stampss = "start="+StartStamp+"&end="+EndStamp+"";
+        
+        }
+
+        function Timestamped(){
+
+            clickedTime.push(Stampss);
+            console.log(clickedTime);
+
+        }
+
     </script>
 </body>
 
