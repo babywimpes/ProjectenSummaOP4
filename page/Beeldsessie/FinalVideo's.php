@@ -26,10 +26,15 @@ $(document).ready(function(){
 var VideoStamps = eval('(<?php echo json_encode($_SESSION["timestamps"])?>)');
 console.log(VideoStamps);
 
+var VideoIDD = eval('(<?php echo json_encode($_SESSION['vidIDD'])?>)');
+console.log(VideoIDD);
+
+
+
 for (i = 0; i < VideoStamps.length; i++) {
 
-    $("#names").append('<div class="m-3"><div class="col"><iframe width="260" height="115" src="https://www.youtube.com/embed/eC7f9tMslVE?'+VideoStamps[i]+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="align-middle col"><button id="'+[i]+'" name="https://www.youtube.com/embed/eC7f9tMslVE?'+VideoStamps[i]+'" onclick="Choose(this.id)" class="w-100 mb-2 btn btn-primary btn-lg">Play</button></div></div>');
-    console.log(VideoStamps)
+    $("#names").append('<div class="m-3"><div class="col"><iframe width="260" height="115" src="https://www.youtube.com/embed/'+VideoIDD+'?'+VideoStamps[i]+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="align-middle col"><button id="'+[i]+'" name="https://www.youtube.com/embed/'+VideoIDD+'?'+VideoStamps[i]+'" onclick="Choose(this.id)" class="w-100 mb-2 btn btn-primary btn-lg">Play</button></div></div>');
+    console.log('heyyy --> https://www.youtube.com/embed/'+VideoIDD+'?'+VideoStamps[i]);
 }
 
 });

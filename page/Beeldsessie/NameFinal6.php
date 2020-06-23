@@ -25,6 +25,9 @@ console.log("Top 6: "+top6);
 var VideoStamps = eval('(<?php echo json_encode($_SESSION["timestamps"])?>)');
 console.log("timestamps: "+ VideoStamps);
 
+var VideoIDD = eval('(<?php echo json_encode($_SESSION['vidIDD'])?>)');
+console.log(VideoIDD);
+
 $(document).ready(function(){
 for (i = 0; i < top6.length; i++) {
 

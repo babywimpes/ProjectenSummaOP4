@@ -31,7 +31,11 @@
     <div class="main">
         <div class=" d-flex justify-content-center">
             <?php
+            session_start();
             $videoId = $_POST['VideoID'];
+            
+            $_SESSION['vidIDD']= $videoId;
+
             // $videoId ="eC7f9tMslVE";
 
             echo '<iframe width="1560" height="677" src="https://www.youtube.com/embed/'.$videoId.'?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
