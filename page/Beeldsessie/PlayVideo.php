@@ -42,6 +42,9 @@
     <div class="col text-center mb-5 mt-2" id="names">
 
     </div>
+    <div class="col text-center mb-5 mt-2" id="names">
+    <a href="FinalVideo's.php" class="btn btn-primary btn-lg">Doorgaan</a>
+    </div>
 
     <label id="seconds">0</label>
 
@@ -58,7 +61,7 @@
             var i;
             for (i = 0; i < session.length; i++) {
 
-            $("#names").append('<button onclick="Timestamped();" class="btn btn-primary btn-lg circ ml-4"><i class="fas fa-user"></i><p style="color:black;">'+session[i]+'</p></button>');
+            $("#names").append('<button id="'+[i]+'" name="1" onclick="Timestamped(this.id);" class="btn btn-primary btn-lg circ ml-4"><i class="fas fa-user"></i><p style="color:black;">'+session[i]+'</p></button>');
             }
 
         });
@@ -86,19 +89,29 @@
         var AmountOfStamps = 1;
         var MaxAmountOfStamps = session.length*6;
         console.log("Max Amount of stamps: "+MaxAmountOfStamps);
-        function Timestamped(){
 
-            if(AmountOfStamps <= MaxAmountOfStamps){
-                AmountOfStamps++;
+        function Timestamped(id){
+
+            var x = document.getElementById(id).getAttribute("name"); 
+            
+
+            if(x <= 111111){
+                var y = document.getElementById(id).name= x+1;
+                console.log(x);
                 clickedTime.push(Stampss);
                 console.log(clickedTime);
                 $.post('SaveData/SaveAnswers.php',{data:clickedTime}, function(response){
 
                 });
+                if(x == 111111){
+                    document.getElementById(id).disabled = true;
+                }
             }
             else{
-
+                
             }
+
+
         };
 
 

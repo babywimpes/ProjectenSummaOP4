@@ -45,8 +45,6 @@
 
     <div class="col text-center mb-5" id="names">
 
-        <!-- <button class="btn btn-primary btn-lg circ ml-1"><i class="fas fa-user"></i></button>
-        <button class="btn btn-primary btn-lg circ ml-1"><i class="fas fa-user"></i></button> -->
     </div>
     <div class="col text-center ">
 
@@ -65,7 +63,7 @@ var array = [];
         } 
         
         else {
-            $("#names").append('<button class="btn btn-primary btn-lg circ ml-1"><i class="fas fa-user"></i><p style="color:black;">'+person+'</p></button>');~
+            $("#names").append('<button class="btn btn-primary btn-lg circ ml-1"><i class="fas fa-user"></i><p style="color:black;">'+person+'</p></button>');
             array.push(person);
             console.log(array);
             $.post('SaveData/SaveUsers.php',{data:array}, function(response){
