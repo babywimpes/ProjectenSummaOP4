@@ -47,6 +47,7 @@
 
     <?php
         session_start();
+        unset($_SESSION['timestamps']);
     ?>
     <script>
         $(document).ready(function(){
@@ -91,11 +92,17 @@
                 AmountOfStamps++;
                 clickedTime.push(Stampss);
                 console.log(clickedTime);
+                $.post('SaveData/SaveAnswers.php',{data:clickedTime}, function(response){
+
+                });
             }
             else{
 
             }
-        }
+        };
+
+
+
 
     </script>
 </body>

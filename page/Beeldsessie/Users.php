@@ -27,7 +27,7 @@
 </head>
 
 <body>
-    <a href="VideoUpload.php" class="btn btn-secondary btn-lg">Upload een video</a>
+    <!-- <a href="VideoUpload.php" class="btn btn-secondary btn-lg">Upload een video</a> -->
     <div class="container top-buffer ">
         <div class="row mb-5">
             <div class="col text-center ">
@@ -68,7 +68,7 @@ var array = [];
             $("#names").append('<button class="btn btn-primary btn-lg circ ml-1"><i class="fas fa-user"></i><p style="color:black;">'+person+'</p></button>');~
             array.push(person);
             console.log(array);
-            $.post('SaveUsers.php',{data:array}, function(response){
+            $.post('SaveData/SaveUsers.php',{data:array}, function(response){
 
 });
     }});
@@ -79,21 +79,11 @@ var array = [];
 <!-- ///////////////////////////////////////////////////////////////////// Haalt session op en opent hem als buttons ///////////////////////////////////////////////////////////////// -->
 <?php
 session_start();
+unset($_SESSION['my_array']);
 ?>
 <script>
 
-$(document).ready(function(){
 
-    var session = eval('(<?php echo json_encode($_SESSION["my_array"])?>)');
-    console.log(session);
-
-    var i;
-    for (i = 0; i < session.length; i++) {
-
-    $("#names").append('<button class="btn btn-primary btn-lg circ ml-1"><i class="fas fa-user"></i><p style="color:black;">'+session[i]+'</p></button>');
-    }
-
- });
  </script>
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
