@@ -14,7 +14,7 @@ session_start();
     
 
 
-<a onclick="getName()" class="w-100 mb-2 btn btn-primary btn-lg" href="EndResult.php">Save Names And Continue</a>
+
 <script>
 
 var Titles = [];
@@ -59,8 +59,11 @@ function getName(){
 
 <div class="row justify-content-center mt-2 m-3" id='names'>
 </div>
-
-
+<hr>
+<div class="col text-center">
+<a onclick="getName()" class="w-50 mb-2 btn btn-primary btn-lg" href="EndResult.php">Save Names And Continue</a><br>
+<a href="FinalVideo's.php" class="btn btn-primary btn-lg">Terug naar vorige</a>
+</div>
 </body>
 </html>
 

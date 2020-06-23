@@ -32,7 +32,7 @@ $("#names").append('<div class="m-3"><div class="col"><p class="font-weight-bold
 
 <div class="row justify-content-center mt-2 m-3" id='names'>
 </div>
-
+<a href="NameFinal6.php" class="btn btn-primary btn-lg">Terug naar vorige</a>
 <a href="../index.php" class="btn btn-primary btn-lg">Afronden en terug naar start</a>
 
 

@@ -31,13 +31,16 @@ td{
 
     <?php
     // LIMIT 6
+    session_start();
     $sql = 'SELECT * FROM upload ORDER BY uploadID DESC ';
     $result = $conn->query($sql);
     foreach($result as $row){
+      
+      $_SESSION['vidIDD'] = $row['videoID'];
         echo '<tr>';
         echo '<form method="POST" action="PlayVideo.php">';
             echo '<td style="max-width:110px">';
-            echo '<iframe width="260" height="115" src="https://www.youtube.com/embed/'.$row['videoID'].'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            echo '<iframe width="260" height="115" src="https://www.youtube.com/embed/'.$_SESSION['vidIDD'].'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
             echo '</td>';
             echo '<td class="align-middle">'.$row['username'].'</td>';
             echo '<td class="align-middle">'.$row['comment'].'</td>';

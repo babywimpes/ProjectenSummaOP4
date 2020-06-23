@@ -56,6 +56,7 @@ if(chosen <= 5){
     console.log(final6array);
 
     $.post('SaveData/SaveFinal6.php',{data:final6array}, function(response){});
+
         if(chosen == 6){
         $("#doorenzo").append('<a href="NameFinal6.php" class="btn btn-primary btn-lg">Doorgaan</a>');
     }
@@ -69,8 +70,9 @@ if(chosen <= 5){
 }
 
 </script>
-<div id="doorenzo" style="position:fixed">
+<div id="doorenzo" class="ml-3" style="position:fixed">
 <p  class="h1 ml-3" id="score">0/6</p>
+<a href="PlayVideo.php" class="btn btn-primary btn-lg">Terug naar vorige</a>
 </div>
 <div class="container">
 <div class="row justify-content-center mt-2 m-3" id='names'>
