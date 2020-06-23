@@ -23,7 +23,7 @@ console.log("timestamps: "+ VideoStamps);
 $(document).ready(function(){
 for (i = 0; i < tit.length; i++) {
 
-$("#names").append('<div class="m-3"><div class="col"><p>'+tit[0]+'</p><iframe width="460" height="215" src="'+top6[i]+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="align-middle col"></div></div>');
+$("#names").append('<div class="m-3"><div class="col"><p class="font-weight-bold h4 ">'+tit[i]+'</p><iframe width="460" height="215" src="'+top6[i]+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="align-middle col"></div></div>');
 
 }});
 
@@ -32,6 +32,8 @@ $("#names").append('<div class="m-3"><div class="col"><p>'+tit[0]+'</p><iframe w
 
 <div class="row justify-content-center mt-2 m-3" id='names'>
 </div>
+<a href="NameFinal6.php" class="btn btn-primary btn-lg">Terug naar vorige</a>
+<a href="../index.php" class="btn btn-primary btn-lg">Afronden en terug naar start</a>
 
 
 

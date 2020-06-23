@@ -24,6 +24,7 @@
   border-radius: 50%;
   display: inline-block;
 }
+.ytplayer {pointer-events: none;}
     </style>
 </head>
 
@@ -31,10 +32,16 @@
     <div class="main">
         <div class=" d-flex justify-content-center">
             <?php
-            $videoId = $_POST['VideoID'];
+            session_start();
+        
+            
+            $videoId= $_SESSION['vidIDD'];
+
+            
+
             // $videoId ="eC7f9tMslVE";
 
-            echo '<iframe width="1560" height="677" src="https://www.youtube.com/embed/'.$videoId.'?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            echo '<iframe class="ytplayer" width="1560" height="677" src="https://www.youtube.com/embed/'.$videoId.'?autoplay=1&controls=0&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
             ?>
         </div>
     </div>
@@ -43,13 +50,13 @@
 
     </div>
     <div class="col text-center mb-5 mt-2" id="names">
+    <a href="ShowvideosALT.php" class="btn btn-primary btn-lg">Terug naar vorige</a>
     <a href="FinalVideo's.php" class="btn btn-primary btn-lg">Doorgaan</a>
     </div>
 
     <label id="seconds">0</label>
 
     <?php
-        session_start();
         unset($_SESSION['timestamps']);
     ?>
     <script>
