@@ -4,17 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
     <style>
         .top-buffer{
             margin-top: 400px;
         }
     </style>
     <title>Homepage</title>
+
+
+    <?php
+session_start();
+
+  
+    if (isset($_GET['logout'])){
+        unset($_SESSION['username']);
+    }
+    else{
+
+    }
+
+   
+    ?>
+    <?php include "../incl/include.php" ?>
+    <?php include "../incl/connect.php" ?>
 </head>
 
 <body>
-<a href="login.php" class="btn btn-primary btn-lg">Login</a>
+<?php
+
+
+if(!isset($_SESSION['username'])) {
+    echo '<a href="login.php" class="btn btn-primary btn-lg">Login</a>';
+}
+else{
+    echo '<a href="index.php?logout" class="btn btn-secondary btn-lg">Logout</a>';
+}
+
+
+
+
+
+?>
+
+
+
+<!-- <a href="login.php" class="btn btn-primary btn-lg">Login</a> -->
     <div class="container top-buffer" >
         <div class="row">
             <div class="col text-center">
