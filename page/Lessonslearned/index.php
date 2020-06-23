@@ -27,7 +27,7 @@
                     ?>
                 </p>
                 <a class="btn btn-primary btn-lg" href="imgpages/allimg.php">Mijn afbeeldingen</a>
-                <a class="btn btn-primary btn-lg" href="audiocomments/audiorecord.php       ">Message bij image</a>
+                <a class="btn btn-primary btn-lg" href="audiocomments/audiorecord.php">Message bij image</a>
             </div>
         </div>
     </div>

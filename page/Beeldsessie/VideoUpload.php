@@ -11,8 +11,8 @@
 
 <body>
     <form method="POST">
-        <input type="text" name="link" />
-        <input type="text" name="comment"/>
+        <input type="text" name="link" placeholder="Link:" />
+        <input type="text" name="comment" placeholder="comment:"/>
         <input type="submit" name="submit" />
     </forms>
 

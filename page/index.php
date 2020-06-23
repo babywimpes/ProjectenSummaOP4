@@ -39,7 +39,7 @@ if(!isset($_SESSION['username'])) {
 }
 else{
     echo '<a href="index.php?logout" class="btn btn-secondary btn-lg">Logout</a>';
-    echo '<a href="VideoUpload.php" class="btn btn-success btn-lg">Upload een video</a>';
+    echo '<a href="Beeldsessie/VideoUpload.php" class="btn btn-success btn-lg">Upload een video</a>';
 }
 
 
